@@ -5,7 +5,7 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "choosistant_template"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
