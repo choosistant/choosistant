@@ -1,6 +1,15 @@
 install_packages:
 	poetry install
 
+sort_imports:
+	isort .
+
+format:
+	black .
+
+lint:
+	flake8 .
+
 test:
 	pytest tests/
 
