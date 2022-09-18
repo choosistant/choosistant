@@ -1,19 +1,21 @@
+.DEFAULT_GOAL := all
+
 install_packages:
 	poetry install
 
 sort_imports:
-	isort .
+	poetry run isort .
 
 format:
-	black .
+	poetry run black .
 
 lint:
-	flake8 .
+	poetry run flake8 .
 
 test:
-	pytest tests/
+	poetry run pytest tests/
 
 precommit:
-	pre-commit install && pre-commit
+	poetry run pre-commit install && poetry run pre-commit run --all-files
 
 all: install_packages precommit test
