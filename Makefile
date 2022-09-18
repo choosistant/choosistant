@@ -1,16 +1,10 @@
-install:
+install_packages:
 	poetry install
 
 test:
 	pytest tests/
 
-sort_imports:
-	isort .
+precommit:
+	pre-commit install && pre-commit
 
-format:
-	black .
-
-lint:
-	flake8 .
-
-all: install sort_imports format lint test
+all: install_packages precommit test
