@@ -28,8 +28,11 @@ jobs:
         with:
           python-version: 3.8.13
           
-      - name: Install Poetry
+      - name: Install poetry
         uses: snok/install-poetry@v1
+        
+      - name: poetry version
+        run: poetry --version
           
       - name: Install dependencies
         run: make install_packages
